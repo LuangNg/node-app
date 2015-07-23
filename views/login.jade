@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	div.container-fluid
+		form#loginForm.form-horizontal
+			div.form-group
+				label.col-sm-2.control-label(for='username') Username
+				div.col-sm-10
+					input#username.form-control(type='text' name='username' placeholder='username')
+			div.form-group
+				label.col-sm-2.control-label(for='password') Password
+				div.col-sm-10
+					input#password.form-control(type='password' name='password' placeholder='password')
+			div.form-group
+				div.col-sm-offset-2.col-sm-10
+					div.checkbox
+						label
+							input(type='checkbox')
+							|Remember me
+			div.form-group
+				div.col-sm-offset-2.col-sm-10
+					button.btn.btn-primary.btn-lg.btn-block(type='submit') Sign in

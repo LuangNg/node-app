@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	div.container-fluid
+		nav.navbar.navbar-default.navbar-fixed-top
+			div.container
+				ol.breadcrumb
+					li
+						a(href='javascript:void(0)') Home
+					li
+						a(href='javascript:void(0)') Data
+					li
+						a(href='javascript:void(0)') About
+		div.jumbotron
+			p hehe
+		form#loginForm.form-horizontal
+			div.form-group
+				label.col-sm-2.control-label(for='username') Username
+				div.col-sm-10
+					input#username.form-control(type='text' name='username' placeholder='Username')
+			div.form-group
+				label.col-sm-2.control-label(for='password') New Password
+				div.col-sm-10
+					input#password.form-control(type='password' name='password' placeholder='Password')
+			div.form-group
+				label.col-sm-2.control-label(for='confpassword') Confirm Password
+				div.col-sm-10
+					input#confpassword.form-control(type='password' name='confpassword' placeholder='Confirm Password')
+			div.form-group
+				label.col-sm-2.control-label(for='email') Email
+				div.col-sm-10
+					input#email.form-control(type='text' name='email' placeholder='Email')
+			div.form-group
+				div.col-sm-offset-2.col-sm-10
+					div.checkbox
+						label
+							input(type='checkbox')
+							|Remember me
+			div.form-group
+				div.col-sm-offset-2.col-sm-10
+					div.col-sm-5
+						button.btn.btn-primary.btn-lg(type='submit') Sign On
+					div.col-sm-5
+						button.btn.btn-primary.btn-lg(type='reset') Reset
+		div.alert.alert-warning Warning! Better check yourself, you're not looking too good.
