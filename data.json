@@ -1,0 +1,6 @@
+db.usercollection.insert({ "username" : "luang", "password" : "123456", "email" : "luang@163.com" })
+
+db.usercollection.find().pretty()
+
+newstuff = [{ "username" : "zhangsan", "password" : "123456", "email" : "zhangsan@163.com" }, { "username" : "lisi", "password" : "123456", "email" : "lisi@163.com" }]
+db.usercollection.insert(newstuff);

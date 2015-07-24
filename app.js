@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//custom config
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('127.0.0.1:27017/blog');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var signon = require('./routes/signon');
@@ -24,6 +29,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//custom config: make db accessible to router
+app.use(function(req, res, next){
+  req.db = db;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

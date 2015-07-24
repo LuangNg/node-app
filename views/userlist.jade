@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	table
+		each user, i in userlist
+			tr
+				td(style={'border':'1px solid #ccc'})= user.username
+				td(style={'border':'1px solid #ccc'})= user.password
+				td(style={'border':'1px solid #ccc'})= user.email
